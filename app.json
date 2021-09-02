@@ -2,6 +2,7 @@
   "pages": [
     "pages/home/index",
     "pages/topic/topic",
+    "pages/topicDetails/topicDetails",
     "pages/catalog/catalog",
     "pages/cart/cart",
     "pages/ucenter/index/index",

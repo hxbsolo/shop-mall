@@ -1,0 +1,6 @@
+@import "./lib/wxParse/wxParse.wxss";
+view, image, text, navigator {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}

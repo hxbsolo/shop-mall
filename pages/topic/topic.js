@@ -1,66 +1,33 @@
-// pages/topic/topic.js
+import {TopicList} from '../../config/config';
+import getAll from '../../utils/network'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  data:{
+    topic:[],
+    page:1,
+    size:10
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad(opations){
+    this.getAll();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  async getAll(){
+    const  res = await getAll(TopicList,{page:this.data.page,size:this.data.size});
+    const pic = [...this.data.topic,...res.data.data]
+    if(this.data.page<3){
+      this.setData({
+        topic:pic
+      })}
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  bindscrolltolower(){
+    let pages = this.data.page 
+    if(this.data.page <= 2){
+      pages +=1
+      this.setData({
+        page:pages
+      })
+      this.getAll();
+    }else{
+      pages = 2
+      console.log('专题只有两页数据')
+    }
   }
 })

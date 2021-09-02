@@ -1,3 +1,75 @@
-<view class="search">
-
-</view>
+<scroll-view scroll-y="true" class="container">
+  <view class="search_header">
+    <view class="search_bar" open-type="navigate" url="/pages/search/search">
+      <input class="search_bar_con" placeholder="{{defaultKeyword.keyword}}" bindconfirm="onKeywordConfirm"
+        bindinput='inputChange' bindfocus="clearshoplist" model:value="{{keyword}}"></input>
+      <image class="search_img" type="text"
+        src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/clearIpt-f71b83e3c2.png"
+        bindtap="clearinput" hidden="{{!current}}"></image>
+    </view>
+    <navigator class="search_right" bindtap="ToBack">
+      取消
+    </navigator>
+  </view>
+  <view class="tar">
+    <view class="shop_tarbar" hidden="{{shopList.length<1}}">
+      <view bindtap="shopSortFilter" data-current='default' class="{{sort=='default'?'actived':''}}">
+        <text>综合</text>
+      </view>
+      <view bindtap="shopSortFilter" data-current='price'
+        class=
+        "item_none {{sort=='price'? 'actived':'item_none'}}.{{order=='asc' ? 'item_up':'item_down'}}">
+        <text>价格</text>
+      </view>
+      <view bindtap="shopSortFilter" data-current='catecurrent'>
+        <text>分类</text>
+      </view>
+    </view>
+    <view hidden="{{catecurrent}}" class="topcate">
+      <view wx:for="{{filterCategory}}" class="cate {{index == cateIndex?'cate_actived':''}}" data-i='{{index}}'
+        data-id='{{item.id}}' bindtap="changecateIndex">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="main {{catecurrent?'':'main_actived'}}">
+    <!-- 模糊搜索展示 -->
+    <view class="vague" hidden="{{!shopList.length<1}}">
+      <view class="vague_item" wx:for="{{vaguelist}}" wx:key='*this' data-val='{{item}}' data-keyword='{{item}}'
+        bindtap="Changeval">{{item}}</view>
+    </view>
+    <!-- 展示商品 -->
+    <view class="show_shoplist" hidden="{{shopList.length<1}}">
+      <view class="shop_lists">
+        <navigator url="/pages/goods/goods?id={{iitem.id}}" wx:for="{{shopList}}" class='shop_item' wx:key='*this'>
+          <image src='{{item.list_pic_url}}'></image>
+          <text class="shop_name">{{item.name}}</text>
+          <text class="shop_price">¥{{item.retail_price}}</text>
+        </navigator>
+      </view>
+    </view>
+    <!-- 搜索商品之前样式 -->
+    <view class="main_v" hidden="{{current}}">
+      <view class="hot" hidden="{{historyKeywordList.length==0}}">
+        <view class="hot_search">
+          <text class="history_text">历史记录</text>
+          <image class="icon"
+            src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/del1-93f0a4add4.png"
+            class="history_img" hidden="{{!historyKeywordList.length>1}}" bindtap="removehistory"></image>
+        </view>
+        <view class="hot_list">
+          <view class="hot_item" wx:for="{{historyKeywordList}}" wx:key='*this'>
+            <text class="h_item" data-val="{{item}}" data-keyword="{{item}}" bindtap="Changeval">{{item}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="hot">
+        <view class="hot_search">热门搜索</view>
+        <view class="hot_list">
+          <view class="hot_item" wx:for="{{hotKeywordList}}" wx:key='{{item.keyword}}'>
+            <text class="h_item {{index==0?'hot_item_ative':''}}" data-val="{{item.keyword}}" bindtap="Changeval"
+              data-keyword="{{item.keyword}}">{{item.keyword}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

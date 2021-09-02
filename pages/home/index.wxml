@@ -15,7 +15,7 @@
   <!-- 分类 -->
   <view class="home_cate">
     <view class="home_cate_item" wx:for="{{data.channel}}">
-      <image src="{{item.icon_url}}"></image>
+      <image src="{{imgs[index]}}"></image>
       <text>{{item.name}}</text>
     </view>
   </view>
