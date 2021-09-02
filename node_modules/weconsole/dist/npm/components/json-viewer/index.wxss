@@ -1,0 +1,22 @@
+.json-viewer {
+  padding: 20rpx;
+  font-family: consolas, menlo, monaco, "Courier New", monospace;
+  font-size: 0;
+  line-height: 0;
+  color: #424242;
+}
+
+.json-viewer.console-jw {
+  display: inherit;
+  min-width: 100%;
+  padding: 0;
+}
+
+.json-string {
+  padding: 20rpx;
+  font-family: consolas, menlo, monaco, "Courier New", monospace;
+  font-size: 20rpx;
+  color: #424242;
+  word-break: break-all;
+  white-space: pre-wrap;
+}

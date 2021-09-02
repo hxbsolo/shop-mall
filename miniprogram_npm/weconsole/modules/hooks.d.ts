@@ -1,0 +1,11 @@
+import { MkFuncHook } from '@mpkit/types';
+import { WeFuncHookState } from '../types/hook';
+export declare const FuncIDHook: MkFuncHook<WeFuncHookState>;
+export declare const FormatApiMethodCallbackHook: MkFuncHook<WeFuncHookState>;
+export declare const MpProductHook: MkFuncHook<WeFuncHookState>;
+export declare const MpViewInsCacheSaveHook: MkFuncHook<WeFuncHookState>;
+export declare const MpViewInsDestoryMarkHook: MkFuncHook<WeFuncHookState>;
+export declare const MpViewInitLifeHook: MkFuncHook<WeFuncHookState>;
+export declare const MpViewFactoryHook: MkFuncHook<WeFuncHookState>;
+export declare const MpViewEventTriggerHook: MkFuncHook<WeFuncHookState>;
+export declare const MpViewEventHandleHook: MkFuncHook<WeFuncHookState>;

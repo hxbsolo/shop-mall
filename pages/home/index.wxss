@@ -1,3 +1,6 @@
+view{
+  box-sizing: border-box;
+}
 .search_bar {
   width: 690rpx;
   height: 56rpx;
@@ -11,7 +14,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.main{
+  height: 100vh;
+}
 .search_bar_con {
   position: relative;
 }
@@ -19,6 +24,7 @@
 .search_bar_con::after {
   content: "";
   left: -38rpx;
+  top: 8rpx;
   width: 28rpx;
   height: 28rpx;
   position: absolute;
@@ -80,7 +86,7 @@
   position: relative;
   top: 0;
   left:0;
-  width: 375rpx;
+  width: 374rpx;
   height: 253rpx;
 }
 .home_brand_drc{
@@ -104,8 +110,7 @@
   flex-wrap: wrap;
 }
 .home_new_item {
-  flex: 1;
-  width: 302rpx;
+  width: 50%;
   padding: 10rpx 21rpx 10rpx 21rpx;
   display: flex;
   flex-wrap: wrap;
@@ -204,6 +209,7 @@
 }
 .home_special_desc_details{
   display: block;
+  width: 500rpx;
   height: 30rpx;
   color: #999;
   font-size: 24rpx;

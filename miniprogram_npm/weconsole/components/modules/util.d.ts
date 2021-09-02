@@ -1,0 +1,10 @@
+import { MpStackInfo, MpSystemInfo } from '../../types/common';
+export declare const removeEndZero: (num: number | string) => string;
+export declare const getStatusText: (status: number) => string;
+export declare const computeTime: (total: number) => string;
+export declare const findValue: (obj: any, prop: string) => any;
+export declare const convertStockToInitiatorName: (stock: MpStackInfo) => string;
+export declare const convertStockToInitiatorDesc: (stock: MpStackInfo) => string;
+export declare const getSystemInfo: (allowFromCache?: boolean) => Promise<MpSystemInfo>;
+export declare const uniq: <T = any>(list: T[]) => T[];
+export declare const rpxToPx: (rpx: number) => Promise<number>;

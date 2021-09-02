@@ -1,0 +1,179 @@
+.fc-filter-bar {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 60rpx;
+  font-size: 24rpx;
+  color: #5e5e5e;
+  background-color: #f3f3f3;
+  border-bottom: 2px solid #ccc;
+}
+
+.fc-filter-bar.has-refresh .fc-filter-items {
+  padding-left: 0;
+}
+
+.fc-filter-bar.has-remove.has-clear .fc-filter-main {
+  width: 620rpx;
+}
+
+.fc-filter-bar.has-remove .fc-filter-main, .fc-filter-bar.has-clear .fc-filter-main {
+  width: 680rpx;
+}
+
+.fc-filter-items {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 100%;
+  padding: 0 15rpx;
+}
+
+.fc-filter-input {
+  flex-shrink: 0;
+  width: 200rpx;
+  height: 44rpx;
+  padding: 0 5rpx;
+  margin-right: 15rpx;
+  font-size: 20rpx;
+  font-weight: bold;
+  line-height: 44rpx;
+  background-color: #fff;
+}
+
+.fc-filter-category {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 8rpx 10rpx;
+  margin-right: 15rpx;
+  line-height: 1;
+  border-radius: 4rpx;
+}
+
+.fc-filter-category.active {
+  color: #fff;
+  background-color: #aaa;
+}
+
+.fc-filter-category-br {
+  height: 100%;
+  margin-right: 15rpx;
+}
+
+.fc-filter-category-br,
+.fc-filter-actions {
+  position: relative;
+  z-index: 5;
+}
+
+.fc-filter-category-br::after,
+.fc-filter-actions::after {
+  position: absolute;
+  top: 15rpx;
+  bottom: 15rpx;
+  left: 1px;
+  width: 1rpx;
+  content: '';
+  background-color: #ccc;
+}
+
+.fc-filter-main,
+.fc-filter-actions {
+  height: 100%;
+}
+
+.fc-filter-main {
+  flex-grow: 0;
+}
+
+.fc-filter-actions {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.fc-filter-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.fc-filter-clear,
+.fc-filter-remove,
+.fc-filter-refresh {
+  position: relative;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.fc-filter-clear::before, .fc-filter-clear::after,
+.fc-filter-clear .wic-arrow-1,
+.fc-filter-clear .wic-arrow-2,
+.fc-filter-remove::before,
+.fc-filter-remove::after,
+.fc-filter-remove .wic-arrow-1,
+.fc-filter-remove .wic-arrow-2,
+.fc-filter-refresh::before,
+.fc-filter-refresh::after,
+.fc-filter-refresh .wic-arrow-1,
+.fc-filter-refresh .wic-arrow-2 {
+  position: absolute;
+  box-sizing: border-box;
+  content: '';
+}
+
+.fc-filter-refresh.wic-refresh {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 4rpx;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.fc-filter-refresh.wic-refresh::before {
+  position: absolute;
+  bottom: 0;
+  left: -14rpx;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12rpx;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(135deg);
+}
+
+.fc-filter-clear.wic-clear::before {
+  width: 100%;
+  height: 100%;
+  border: 4rpx solid #5e5e5e;
+  border-radius: 50%;
+}
+
+.fc-filter-clear.wic-clear::after {
+  top: 50%;
+  width: 100%;
+  height: 4rpx;
+  margin-top: -2rpx;
+  background-color: #5e5e5e;
+  transform: rotate(45deg);
+}
+
+.fc-filter-remove.wic-close::before, .fc-filter-remove.wic-close::after {
+  top: 50%;
+  width: 100%;
+  height: 4rpx;
+  margin-top: -2rpx;
+  background-color: #5e5e5e;
+}
+
+.fc-filter-remove.wic-close::before {
+  transform: rotate(45deg);
+}
+
+.fc-filter-remove.wic-close::after {
+  transform: rotate(135deg);
+}

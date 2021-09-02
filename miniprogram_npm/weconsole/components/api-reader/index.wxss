@@ -1,0 +1,61 @@
+.fc-reader {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  background-color: #fff;
+}
+
+.fc-reader-detail-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 30%;
+  z-index: 10;
+  display: block;
+  background-color: #fff;
+}
+
+.fc-reader-detail-container.has-bar {
+  top: 60rpx;
+}
+
+.fc-reader-detail-container .fc-reader-detail-scroll {
+  height: 100%;
+}
+
+.fc-reader-body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.fc-reader-body.has-bar {
+  top: 60rpx;
+}
+
+.fc-api-reader-th.fc-show-detail .fc-col-1 {
+  width: 100%;
+}
+
+.fc-api-reader-th.fc-show-detail .fc-col-1::after {
+  right: auto;
+  left: 30%;
+}
+
+.fc-api-reader-th.fc-show-detail .fc-col-2,
+.fc-api-reader-th.fc-show-detail .fc-col-3,
+.fc-api-reader-th.fc-show-detail .fc-col-4,
+.fc-api-reader-th.fc-show-detail .fc-col-5 {
+  display: none;
+}
+
+.fc-api-reader-th.fc-show-detail .fc-col-2::after,
+.fc-api-reader-th.fc-show-detail .fc-col-3::after,
+.fc-api-reader-th.fc-show-detail .fc-col-4::after,
+.fc-api-reader-th.fc-show-detail .fc-col-5::after {
+  display: none;
+}

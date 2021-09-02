@@ -1,41 +1,22 @@
 <view class="home">
-  <!--搜索 -->
-  <view class="search_bar">
-    <text class="search_bar_con">商品搜索,共239款好物</text>
-  </view>
+  <weconsole fullTop='400rpx' adapFullTop='600rpx'/>
+<scroll-view scroll-y="true">
+  <view class="main">
+      <!--搜索 -->
+  <navigator class="search_bar" open-type="navigate" url="/pages/search/search">
+    <text class="search_bar_con">商品搜索,共{{GoodsCount}}款好物</text>
+  </navigator>
   <!-- banner图 -->
   <swiper indicator-dots="{{true}}"autoplay="{{true}}"  interval="{{3000}}" class="home_banner">
-    <swiper-item>
-      <image src="http://yanxuan.nosdn.127.net/65091eebc48899298171c2eb6696fe27.jpg " class="banner_img"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="http://yanxuan.nosdn.127.net/bff2e49136fcef1fd829f5036e07f116.jpg" class="banner_img"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="http://yanxuan.nosdn.127.net/8e50c65fda145e6dd1bf4fb7ee0fcecc.jpg" class="banner_img"></image>
+    <swiper-item wx:for="{{data.banner}}">
+      <image src="{{item.image_url}}" class="banner_img"></image>
     </swiper-item>
   </swiper>
   <!-- 分类 -->
   <view class="home_cate">
-    <view class="home_cate_item">
-      <image></image>
-      <text>111111</text>
-    </view>
-    <view class="home_cate_item">
-      <image></image>
-      <text>111111</text>
-    </view>
-    <view class="home_cate_item">
-      <image></image>
-      <text>111111</text>
-    </view>
-    <view class="home_cate_item">
-      <image></image>
-      <text>111111</text>
-    </view>
-    <view class="home_cate_item">
-      <image></image>
-      <text>111111</text>
+    <view class="home_cate_item" wx:for="{{data.channel}}">
+      <image src="{{item.icon_url}}"></image>
+      <text>{{item.name}}</text>
     </view>
   </view>
   <view class="grap"></view>
@@ -45,32 +26,11 @@
       <view class="home_brand_title">品牌制造商直供</view>
     </view>
     <view class="home_brand_list">
-      <view class="home_brand_item">
-        <image mode="aspectFill" src="http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg"></image>
+      <view class="home_brand_item" wx:for="{{data.brandList}}">
+        <image mode="aspectFill" src="{{item.new_pic_url}}"></image>
         <view class="home_brand_drc">
-          <text class="home_brand_desc_title">CK制造商</text>
-          <text class="home_brand_desc_price">39元起</text>
-        </view>
-      </view>
-      <view class="home_brand_item">
-        <image mode="aspectFill" src="http://yanxuan.nosdn.127.net/4ea3f1e60dd77c45c218e503d721a1ed.jpg"></image>
-        <view class="home_brand_drc">
-          <text class="home_brand_desc_title">CK制造商</text>
-          <text class="home_brand_desc_price">39元起</text>
-        </view>
-      </view>
-      <view class="home_brand_item">
-        <image mode="aspectFill" src="http://yanxuan.nosdn.127.net/abcfa79205679db51198adc19c184dd1.jpg"></image>
-        <view class="home_brand_drc">
-          <text class="home_brand_desc_title">CK制造商</text>
-          <text class="home_brand_desc_price">39元起</text>
-        </view>
-      </view>
-      <view class="home_brand_item">
-        <image mode="aspectFill" src="http://yanxuan.nosdn.127.net/b5cd73d3b310bad02539412f064d4ea1.jpg"></image>
-        <view class="home_brand_drc">
-          <text class="home_brand_desc_title">CK制造商</text>
-          <text class="home_brand_desc_price">39元起</text>
+          <text class="home_brand_desc_title">{{item.name}}</text>
+          <text class="home_brand_desc_price">{{item.floor_price}}元起</text>
         </view>
       </view>
     </view>
@@ -79,32 +39,11 @@
    <view class="home_new">
      <view class="home_brand_title">周一周四 · 新品首发</view>
      <view class="home_new_list">
-      <view class="home_new_item">
-       <image src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" mode="aspectFill"></image>
+      <view class="home_new_item" wx:for="{{data.newGoodsList}}">
+       <image src="{{item.list_pic_url}}" mode="aspectFill"></image>
        <view class="home_new_drc">
-         <text class="home_new_desc_title">蔓越莓曲奇 200克</text>
-         <text class="home_new_desc_price">￥36</text>
-       </view>
-     </view>
-     <view class="home_new_item">
-       <image src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" mode="aspectFill"></image>
-       <view class="home_new_drc">
-         <text class="home_new_desc_title">蔓越莓曲奇蔓越莓曲奇蔓越莓曲奇 200克</text>
-         <text class="home_new_desc_price">￥36</text>
-       </view>
-     </view>
-     <view class="home_new_item">
-       <image src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" mode="aspectFill"></image>
-       <view class="home_new_drc">
-         <text class="home_new_desc_title">蔓越莓曲奇蔓越莓曲奇蔓越莓曲奇 200克</text>
-         <text class="home_new_desc_price">￥36</text>
-       </view>
-     </view>
-     <view class="home_new_item">
-       <image src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" mode="aspectFill"></image>
-       <view class="home_new_drc">
-         <text class="home_new_desc_title">蔓越莓曲奇蔓越莓曲奇蔓越莓曲奇 200克</text>
-         <text class="home_new_desc_price">￥36</text>
+         <text class="home_new_desc_title">{{item.name}}</text>
+         <text class="home_new_desc_price">￥{{item.retail_price}}</text>
        </view>
      </view>
      </view>
@@ -113,36 +52,12 @@
    <view class="home_popularity">
       <view class="home_brand_title">人气推荐</view>
       <view class="home_popularity_list">
-        <view class="home_popularity_item">
-          <image src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" class="home_popularity_img"></image>
+        <view class="home_popularity_item" wx:for="{{data.hotGoodsList}}">
+          <image src="{{item.list_pic_url}}" class="home_popularity_img"></image>
           <view class="home_popularity_right">
-            <text class="home_new_desc_title">双宫茧桑蚕丝被 空调被</text>
-            <text class="home_popularity_details">一级桑蚕丝，吸湿透气柔软</text>
-            <text class="home_popularity_desc_price">￥699</text>
-          </view>
-        </view>
-        <view class="home_popularity_item">
-          <image src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" class="home_popularity_img"></image>
-          <view class="home_popularity_right">
-            <text class="home_new_desc_title">双宫茧桑蚕丝被双宫茧桑蚕丝被双宫茧桑蚕丝被双宫茧桑蚕丝被 空调被</text>
-            <text class="home_popularity_details">一级桑蚕丝，吸湿透气柔软</text>
-            <text class="home_popularity_desc_price">￥699</text>
-          </view>
-        </view>
-        <view class="home_popularity_item">
-          <image src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" class="home_popularity_img"></image>
-          <view class="home_popularity_right">
-            <text class="home_new_desc_title">双宫茧桑蚕丝被双宫茧桑蚕丝被双宫茧桑蚕丝被 空调被</text>
-            <text class="home_popularity_details">一级桑蚕丝，吸湿透气柔软</text>
-            <text class="home_popularity_desc_price">￥699</text>
-          </view>
-        </view>
-        <view class="home_popularity_item">
-          <image src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" class="home_popularity_img"></image>
-          <view class="home_popularity_right">
-            <text class="home_new_desc_title">双宫双宫双宫茧桑蚕丝被茧桑蚕丝被茧桑蚕丝被 空调被</text>
-            <text class="home_popularity_details">一级桑蚕丝，吸湿透气柔软</text>
-            <text class="home_popularity_desc_price">￥699</text>
+            <text class="home_new_desc_title">{{item.goods_brief}}</text>
+            <text class="home_popularity_details">{{item.goods_brief}}</text>
+            <text class="home_popularity_desc_price">￥{{item.retail_price}}</text>
           </view>
         </view>
       </view>
@@ -152,41 +67,36 @@
     <view class="home_brand_title">专题精选</view>
     <scroll-view scroll-x="true" enable-flex="true">
     <view class="special_list">
-      <view class="special_item">
-        <image src="https://yanxuan.nosdn.127.net/14943267735961674.jpg" class="special_img"></image>
+      <view class="special_item" wx:for="{{data.topicList}}">
+        <image src="{{item.item_pic_url}}" class="special_img"></image>
         <view class="special_desc">
           <view class="">
-           <text class="home_special_desc_title">关爱他成长的每一个足迹</text>
-           <text class="home_special_desc_price">￥0元起</text>
+           <text class="home_special_desc_title">{{item.title}}</text>
+           <text class="home_special_desc_price">￥{{item.price_info}}元起</text>
           </view>
-           <text class="home_special_desc_details">专业运动品牌同厂，毛毛虫鞋买二送一</text>
-        </view>
-      </view>
-      <view class="special_item">
-        <image src="https://yanxuan.nosdn.127.net/14943267735961674.jpg" class="special_img"></image>
-        <view class="special_desc">
-          <view class="">
-           <text class="home_special_desc_title">关爱他成长的每一个足迹</text>
-           <text class="home_special_desc_price">￥0元起</text>
-          </view>
-           <text class="home_special_desc_details">专业运动品牌同厂，毛毛虫鞋买二送一</text>
-        </view>
-      </view>
-      <view class="special_item">
-        <image src="https://yanxuan.nosdn.127.net/14943267735961674.jpg" class="special_img"></image>
-        <view class="special_desc">
-          <view class="">
-           <text class="home_special_desc_title">关爱他成长的每一个足迹</text>
-           <text class="home_special_desc_price">￥0元起</text>
-          </view>
-           <text class="home_special_desc_details">专业运动品牌同厂，毛毛虫鞋买二送一</text>
+           <text class="home_special_desc_details">{{item.subtitle}}</text>
         </view>
       </view>
     </view>
     </scroll-view>
    </view>
    <!--重复商品列表-->
-   <view>
-     <view></view>
+   <view class="floor">
+     <view class="floor_list">
+       <view class="fllor_item" wx:for="{{data.categoryList}}">
+        <view class="home_brand_title">{{item.name}}</view>
+        <view class="home_new_list">
+      <view class="home_new_item" wx:for="{{item.goodsList}}">
+       <image src="{{item.list_pic_url}}" mode="aspectFill"></image>
+       <view class="home_new_drc">
+         <text class="home_new_desc_title">{{item.name}}</text>
+         <text class="home_new_desc_price">￥{{item.retail_price}}</text>
+       </view>
+     </view>
+     </view>
+       </view>
+     </view>
    </view>
+  </view>
+</scroll-view>
 </view>

@@ -1,4 +1,5 @@
 // app.js
+import "weconsole/init";
 App({
   onLaunch() {
     // 展示本地存储能力

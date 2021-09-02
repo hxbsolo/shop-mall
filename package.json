@@ -1,0 +1,22 @@
+{
+  "name": "shop-mall",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hxbsolo/shop-mall.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hxbsolo/shop-mall/issues"
+  },
+  "homepage": "https://github.com/hxbsolo/shop-mall#readme",
+  "description": "",
+  "dependencies": {
+    "weconsole": "^1.0.7"
+  }
+}

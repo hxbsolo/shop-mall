@@ -1,0 +1,204 @@
+.fc-hand {
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80rpx;
+  height: 80rpx;
+  cursor: pointer;
+  background: #1b9af7;
+  border-radius: 50%;
+  box-shadow: 0 0 20rpx #1b9af7;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fc-hand.fc-adap {
+  bottom: 120rpx;
+}
+
+.fc-hand:hover, .fc-hand:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fc-hand.is-hide {
+  display: none;
+}
+
+.fc-hand-icon {
+  width: 80%;
+  height: 80%;
+}
+
+.fc-modal {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.fc-modal.is-show {
+  display: block;
+}
+
+.fc-modal.is-full {
+  top: 0;
+}
+
+.fc-modal.fc-adap-scroll .fc-modal-body {
+  bottom: 100rpx;
+}
+
+.fc-modal-adap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+  margin-bottom: -1px;
+  border-top: 1px solid #ccc;
+}
+
+.fc-modal-body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fc-ad {
+  font-family: fantasy;
+  font-size: 40rpx;
+  font-weight: 300;
+  color: #ccc;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.fc-tabs-action {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.fc-tabs-action::after {
+  position: absolute;
+  top: 15rpx;
+  right: 0;
+  bottom: 15rpx;
+  z-index: 15;
+  width: 1rpx;
+  content: '';
+  background-color: #ccc;
+}
+
+.fc-tabs-action-right::after {
+  right: auto;
+  left: 0;
+}
+
+.fc-tabs-zoom,
+.fc-tabs-close {
+  position: relative;
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.fc-tabs-zoom::before, .fc-tabs-zoom::after,
+.fc-tabs-zoom .wic-arrow-1,
+.fc-tabs-zoom .wic-arrow-2,
+.fc-tabs-close::before,
+.fc-tabs-close::after,
+.fc-tabs-close .wic-arrow-1,
+.fc-tabs-close .wic-arrow-2 {
+  position: absolute;
+  box-sizing: border-box;
+  content: '';
+}
+
+.fc-tabs-zoom.wic-compress::before, .fc-tabs-zoom.wic-compress::after,
+.fc-tabs-zoom.wic-compress .wic-arrow-1,
+.fc-tabs-zoom.wic-compress .wic-arrow-2, .fc-tabs-zoom.wic-expand::before, .fc-tabs-zoom.wic-expand::after,
+.fc-tabs-zoom.wic-expand .wic-arrow-1,
+.fc-tabs-zoom.wic-expand .wic-arrow-2 {
+  width: 40%;
+  height: 40%;
+  border: 4rpx solid #5e5e5e;
+}
+
+.fc-tabs-zoom.wic-compress::before, .fc-tabs-zoom.wic-compress::after,
+.fc-tabs-zoom.wic-compress .wic-arrow-1,
+.fc-tabs-zoom.wic-compress .wic-arrow-2 {
+  transform: rotate(180deg);
+}
+
+.fc-tabs-zoom.wic-compress::before, .fc-tabs-zoom.wic-expand::before {
+  top: 0;
+  left: 0;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.fc-tabs-zoom.wic-compress::after, .fc-tabs-zoom.wic-expand::after {
+  top: 0;
+  right: 0;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.fc-tabs-zoom.wic-compress .wic-arrow-1,
+.fc-tabs-zoom.wic-expand .wic-arrow-1 {
+  bottom: 0;
+  left: 0;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.fc-tabs-zoom.wic-compress .wic-arrow-2,
+.fc-tabs-zoom.wic-expand .wic-arrow-2 {
+  right: 0;
+  bottom: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+.fc-tabs-close.wic-close::before, .fc-tabs-close.wic-close::after {
+  top: 50%;
+  width: 100%;
+  height: 4rpx;
+  margin-top: -2rpx;
+  background-color: #5e5e5e;
+}
+
+.fc-tabs-close.wic-close::before {
+  transform: rotate(45deg);
+}
+
+.fc-tabs-close.wic-close::after {
+  transform: rotate(135deg);
+}
+
+.fc-tab-panel-reader {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+}

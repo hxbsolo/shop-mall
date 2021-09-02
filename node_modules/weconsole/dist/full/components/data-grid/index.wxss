@@ -1,0 +1,155 @@
+.vl-scroller {
+  z-index: 1;
+  height: 100%;
+}
+
+.fc-datagrid {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  color: #5e5e5e;
+  background-color: #fff;
+}
+
+.fc-datagrid.has-data .fc-datagrid-col {
+  padding-right: 0;
+  border-right-color: transparent;
+}
+
+.fc-datagrid-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 1px;
+  margin-left: -1px;
+  background-color: #ccc;
+}
+
+.fc-api-datagrid .fc-datagrid-affix .fc-datagrid-col.fc-i3,
+.fc-api-datagrid .fc-datagrid-scroll .fc-datagrid-col.fc-i3 {
+  text-decoration: underline;
+}
+
+.fc-api-datagrid.show-detail {
+  width: 30%;
+}
+
+.fc-api-datagrid.show-detail .fc-datagrid-col,
+.fc-api-datagrid.show-detail .fc-datagrid-line {
+  display: none;
+}
+
+.fc-api-datagrid.show-detail .fc-datagrid-col.fc-i0 {
+  display: flex;
+  width: 100% !important;
+}
+
+.fc-datagrid-head {
+  box-sizing: border-box;
+  height: 70rpx;
+  font-size: 26rpx;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #ccc;
+}
+
+.fc-datagrid-head .fc-datagrid-col {
+  height: 100%;
+  font-size: inherit;
+}
+
+.fc-datagrid-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #5e5e5e;
+}
+
+.fc-datagrid-row.fc-500, .fc-datagrid-row.fc-404 {
+  color: #f00;
+}
+
+.fc-datagrid-row.fc-even {
+  background-color: #f5f5f5;
+}
+
+.fc-datagrid-row.fc-odd {
+  background-color: #fff;
+}
+
+.fc-datagrid-row.fc-selected {
+  color: #fff !important;
+  background-color: #1b9af7;
+}
+
+.fc-datagrid-row-request,
+.fc-datagrid-row-ws {
+  font-weight: bold;
+}
+
+.fc-datagrid-col {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: 6rpx 10rpx;
+  font-size: 24rpx;
+  line-height: 1.2;
+  border-right: 1px solid #ccc;
+}
+
+.fc-datagrid-col.fc-last {
+  border-right: none;
+}
+
+.fc-datagrid-col.fc-hide {
+  display: none;
+}
+
+.fc-datagrid-col.fc-nowrap {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fc-datagrid-col.fc-nowrap .fc-datagrid-col-content,
+.fc-datagrid-col.fc-nowrap .fc-datagrid-col-desc {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.fc-datagrid-col.fc-nowrap .fc-datagrid-col-content {
+  height: 28.8rpx;
+}
+
+.fc-datagrid-col.fc-nowrap .fc-datagrid-col-desc {
+  height: 26.4rpx;
+}
+
+.fc-datagrid-col-desc {
+  margin-top: 4rpx;
+  font-size: 22rpx;
+  opacity: 0.7;
+}
+
+.fc-datagrid-affix {
+  position: relative;
+  z-index: 8;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 8rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.fc-datagrid-scroll {
+  position: absolute;
+  top: 70rpx;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+}
