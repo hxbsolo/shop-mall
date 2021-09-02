@@ -1,2 +1,30 @@
-<!--pages/catalog/catalog.wxml-->
-<text>pages/catalog/catalog.wxml</text>
+<view class="catalog">
+  <!--搜索 -->
+  <navigator class="search_bar" open-type="navigate" url="/pages/search/search">
+    <text class="search_bar_con">商品搜索,共{{GoodsCount}}款好物</text>
+  </navigator>
+  <view class="catlog">
+    <scroll-view scroll-y="true" class="nav_right">
+    <view class="silde_item {{itemType==index?'item_actived':''}}" bindtap="Switchtype" wx:for="{{categoryList}}"data-id='{{item.id}}' data-i='{{index}}' bindtap="Cate">
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <scroll-view scroll-y="true" class="cate">
+    <navigator class="banner" url="">
+      <image src="{{currentCategory.wap_banner_url}}"></image>
+      <text >{{currentCategory.front_desc}}</text>
+    </navigator>
+    <view class="calog_title">
+      <text class="line"></text>
+      <text class="text">{{currentCategory.name}}</text>
+      <text class="line"></text>
+    </view>
+    <view class="catlog_list">
+      <navigator class="catlog_item" url="/pages/category/category?id={{item.parent_id}}" wx:for="{{currentCategory.subCategoryList}}">
+        <image src="{{item.wap_banner_url}}" class="catlog_image"></image>
+        <text class="catlog_text">{{item.name}}</text>
+      </navigator>
+    </view>
+  </scroll-view>
+  </view>
+</view>

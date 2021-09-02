@@ -187,7 +187,6 @@
 }
 .show_shoplist{
   padding:0 6.25rpx;
-  margin-top: 175rpx;
 }
 .shop_item image {
   width: 302rpx;
@@ -264,4 +263,8 @@
 .cate_actived{
   color: #b4282d;
   border: 1px solid #b4282d;
+}
+
+.toplist{
+  margin-top: 82rpx;
 }

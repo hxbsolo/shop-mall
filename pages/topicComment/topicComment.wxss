@@ -1,10 +1,6 @@
-.container{
-  background: #f4f4f4;
-}
 .comments{
   width: 100%;
   height: auto;
-  padding-left: 30rpx;
   background: #fff;
   margin-top: 20rpx;
 }
@@ -78,71 +74,4 @@
     color: #7f7f7f;
     font-size: 25rpx;
     margin-right: 30rpx;
-}
-.load{
-  width: 720rpx;
-  height: 108rpx;
-  line-height: 108rpx;
-  text-align: center;
-  font-size: 38.5rpx;
-}
-.tp_v{
-  position: relative;
-  width: 690rpx;
-  height: 96rpx;
-  margin-bottom: 32rpx;
-}
-.tp_pic{
-  display: inline-block;
-    position: absolute;
-    background: #f4f4f4;
-    top: 59rpx;
-    left: 200rpx;
-    width: 290rpx;
-    height: 45rpx;
-    line-height: 45rpx;
-    font-size: 30rpx;
-    color: #999;
-    text-align: center;
-}
-.tp_to{
-  width: 690rpx;
-    height: 397rpx;
-    padding: 24rpx 24rpx 30rpx 24rpx;
-    background: #fff;
-    margin-bottom: 30rpx;   
-}
-.tp_image{
-  height: 278rpx;
-  width: 642rpx;
-}
-.tp_title{
-  display: block;
-    margin-top: 30rpx;
-    height: 30rpx;
-    width: 642rpx;
-    font-size: 28rpx;
-}
-.footer{
-  width: 690rpx;
-  height: auto;
-  margin: 0 30rpx;
-}
-.none_talk{
-  margin: 48rpx auto 18rpx auto;
-    height: 130rpx;
-    display: block;
-    width: 115rpx;
-}
-.none_txt{
-  height: 43rpx;
-    line-height: 43rpx;
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 29rpx;
-    color: #7f7f7f;
-}
-.none_v{
-  height: 297rpx;
 }

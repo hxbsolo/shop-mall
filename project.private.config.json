@@ -29,6 +29,12 @@
           "pathName": "pages/topic/topic",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/catalog/catalog",
+          "pathName": "pages/catalog/catalog",
+          "query": "",
+          "scene": null
         }
       ]
     }

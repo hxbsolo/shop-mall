@@ -1,9 +1,4 @@
-<scroll-view scroll-y="true" class="container">
-  <scroll-view scroll-y="true">
-    <import src="../../lib/wxParse/wxParse.wxml" />
-    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
-  </scroll-view>
-  <scroll-view scroll-y="true" class="comments">
+<scroll-view scroll-y="true" class="comments">
     <view class="header_title">
       <text class="Selected messages">精选留言</text>
       <image src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/comment-add-2aca147c3f.png" class="Selected_image"></image>
@@ -32,13 +27,3 @@
       </view>
     </view>
   </scroll-view>
-  <scroll-view scroll-y="true" class="footer">
-    <view class="tp_v">
-      <text class="tp_pic">专题推荐</text>
-    </view>
-      <navigator url="/pages/topicDetails/topicDetails?id=314" class="tp_to" wx:for="{{topic}}"> 
-        <image src="{{item.scene_pic_url}}" class="tp_image"></image>
-        <text class="tp_title">{{item.title}}</text>
-      </navigator>
-  </scroll-view>
-</scroll-view>

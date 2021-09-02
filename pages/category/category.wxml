@@ -1,0 +1,9 @@
+<view class="container">
+  <view>
+    <scroll-view scroll-x="true">
+      <view wx:for="{{navlist}}">
+        <view>{{item}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,7 +1,7 @@
 const http = (url, data = {}, method = "GET") => {
-  // wx.showLoading({
-  //   title: '加载中',
-  // })
+  wx.showLoading({
+    title: '加载中',
+  })
   return new Promise((resolve, reject) => {
     wx.request({
       url,
@@ -28,9 +28,9 @@ const http = (url, data = {}, method = "GET") => {
         })
         reject(err)
       },
-      // complete(){
-      //   wx.hideLoading()
-      // }
+      complete(){
+        wx.hideLoading()
+      }
     })
   })
 }

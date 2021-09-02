@@ -1,66 +1,36 @@
-// pages/catalog/catalog.js
+import http from '../../utils/network';
+import {CatalogList,CatalogCurrent} from '../../config/config';
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  data:{
+    categoryList:[],
+    currentCategory:[],
+    itemType:0,
+    id:''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad(opations){
+    this.getAll()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  async getAll(){
+    if(this.data.id == ''){
+      const list = await http(CatalogList);
+      let {categoryList,currentCategory} = list.data;
+      this.setData({
+        categoryList:categoryList,
+        currentCategory:currentCategory
+      })
+    }else{
+      const current = await http(CatalogCurrent,{id:this.data.id});
+      this.setData({
+        currentCategory:current.data.currentCategory
+      })
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //侧边分类
+  Cate(e){
+    this.setData({
+      id:e.currentTarget.dataset.id,
+      itemType:e.currentTarget.dataset.i
+    })
+    this.getAll();
   }
 })

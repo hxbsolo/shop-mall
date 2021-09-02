@@ -22,7 +22,8 @@ Page({
     filterCategory:[],//商品具体分类
     cateIndex:0,
     catecurrent:true,
-    cateIndex:0
+    cateIndex:0,
+    key:''
   },
   onLoad(options) {
     this.getAll()
@@ -72,6 +73,7 @@ Page({
       })
     } else {
       this.setData({
+        key:'default',
         current: false,
         vaguelist: [],
         shopList: [],
@@ -107,6 +109,13 @@ Page({
   },
   // 监听input 回车请求数据
   onKeywordConfirm(e) {
+    console.log(e)
+    if(this.data.key == 'default'|| e.detail.value == '' ){
+      this.setData({
+        keyword:this.data.defaultKeyword.keyword,
+        key:''
+      })
+    }
     this.getData()
     this.getAll()
   },

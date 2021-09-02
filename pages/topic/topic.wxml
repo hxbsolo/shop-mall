@@ -1,7 +1,7 @@
 <view class="container">
-  <scroll-view scroll-y="true" bindscrolltolower='bindscrolltolower'>
-  <view style="    height: 100vh;">
-    <navigator url='/pages/topicDetails/topicDetails?id={{item.id}}' wx:for="{{topic}}" class="topic_item">
+  <scroll-view scroll-y="true" bindscrolltolower='bindscrolltolower' style="height:100vh;">
+  <view>
+    <navigator url='/pages/topicDetails/topicDetails?id={{item.id}}' wx:for="{{topic}}" class="topic_item" wx:key="id">
       <image src="{{item.scene_pic_url}}"></image>
       <view class="topic_item_info">
         <text class="title">{{item.title}}</text>

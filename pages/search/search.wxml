@@ -26,8 +26,12 @@
       </view>
     </view>
     <view hidden="{{catecurrent}}" class="topcate">
-      <view wx:for="{{filterCategory}}" class="cate {{index == cateIndex?'cate_actived':''}}" data-i='{{index}}'
+    <scroll-view scroll-y="true" style="height:90rpx">
+      <view>
+        <view wx:for="{{filterCategory}}" class="cate {{index == cateIndex?'cate_actived':''}}" data-i='{{index}}'
         data-id='{{item.id}}' bindtap="changecateIndex">{{item.name}}</view>
+      </view>
+    </scroll-view>
     </view>
   </view>
   <view class="main {{catecurrent?'':'main_actived'}}">
@@ -37,7 +41,7 @@
         bindtap="Changeval">{{item}}</view>
     </view>
     <!-- 展示商品 -->
-    <view class="show_shoplist" hidden="{{shopList.length<1}}">
+    <view class="show_shoplist {{!catecurrent?'':'toplist'}}" hidden="{{shopList.length<1}}">
       <view class="shop_lists">
         <navigator url="/pages/goods/goods?id={{iitem.id}}" wx:for="{{shopList}}" class='shop_item' wx:key='*this'>
           <image src='{{item.list_pic_url}}'></image>

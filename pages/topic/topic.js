@@ -18,6 +18,7 @@ Page({
       })}
   },
   bindscrolltolower(){
+    console.log(1)
     let pages = this.data.page 
     if(this.data.page <= 2){
       pages +=1
