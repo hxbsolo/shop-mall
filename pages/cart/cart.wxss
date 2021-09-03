@@ -1,1 +1,203 @@
-/* pages/cart/cart.wxss */
+.cart{
+    height: 100vh;
+    background: #f4f4f4;
+    margin-bottom: 120rpx;
+}
+.service-policy {
+    width: 750rpx;
+    height: 73rpx;
+    background: #f4f4f4;
+    padding: 0 31.25rpx;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-scroll {
+    height: 100vh;
+    background: #f4f4f4;
+}
+
+.policy_item {
+    background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/servicePolicyRed-518d32d74b.png) 0 center no-repeat;
+    background-size: 10rpx;
+    padding-left: 15rpx;
+    display: flex;
+    align-items: center;
+    font-size: 25rpx;
+    color: #666;
+}
+
+.show_goodlist {
+    background: #fff;
+}
+
+.item {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.item_check {
+    width: 37rpx;
+    height: 37rpx;
+    background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-0e09baa37e.png) no-repeat;
+    background-size: 100%;
+    margin: 58rpx 20rpx 20rpx 20rpx;
+}
+
+.item_check.actived {
+    width: 37rpx;
+    height: 37rpx;
+    background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-checked-822e54472a.png) no-repeat;
+    background-size: 100%;
+    margin: 58rpx 20rpx 20rpx 20rpx;
+}
+
+.item_details {
+    flex: 1;
+    display: flex;
+    padding: 20rpx 10rpx;
+}
+
+.item_image {
+    height: 125rpx;
+    width: 125rpx;
+    background: #f4f4f4;
+}
+
+.info {
+    flex: 1;
+    padding: 4rpx 14rpx;
+}
+
+.details {
+    height: 54rpx;
+    font-size: 24rpx;
+}
+
+.attr {
+    text-align: right;
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/arrow-right1-e9828c5b35.png) right center no-repeat;
+    padding-right: 25rpx;
+    background-size: 12rpx 20rpx;
+    height: 54rpx;
+    line-height: 54rpx;
+    font-size: 24rpx;
+    color: #999;
+    overflow: hidden;
+}
+
+.price {
+    height: 30rpx;
+    font-size: 29rpx;
+    color: #333;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #fff;
+    z-index: 999;
+    font-size: 28rpx;
+}
+
+.bottom_image {
+    margin: 22rpx 25rpx 20rpx 20rpx !important;
+}
+
+.all {
+    margin-right: 40rpx;
+}
+
+.edit {
+    margin: 0 20rpx;
+}
+
+.totalprice {
+    flex: 1;
+}
+
+.push {
+    display: inline-block;
+    width: 200rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background: #b4282d;
+    color: #fff;
+}
+
+.name {
+    float: left;
+}
+
+.number {
+    float: right;
+}
+
+.none {
+    width: 100%;
+    height: auto;
+    margin-top: 200rpx;
+}
+
+.none_image {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 258rpx;
+    height: 258rpx;
+}
+
+.goadd {
+    margin: 0 auto;
+    display: block;
+    width: 258rpx;
+    height: 29rpx;
+    line-height: 29rpx;
+    text-align: center;
+    font-size: 29rpx;
+    color: #999;
+}
+
+.pricet {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.selnum {
+    width: 235rpx;
+    height: 52rpx;
+    border: 1rpx solid #ccc;
+    display: flex;
+}
+
+.selnum_input {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    line-height: 68.75rpx;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    float: left;
+}
+
+.crement {
+    width: 70rpx;
+    height: 100%;
+    text-align: center;
+    line-height: 50rpx;
+}
+
+.increment {
+    width: 70rpx;
+    height: 100%;
+    text-align: center;
+    line-height: 50rpx;
+}

@@ -13,26 +13,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/home/index",
-          "pathName": "pages/home/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/search/search",
-          "pathName": "pages/search/search",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/topic/topic",
-          "pathName": "pages/topic/topic",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/catalog/catalog",
-          "pathName": "pages/catalog/catalog",
+          "name": "pages/cart/cart",
+          "pathName": "pages/cart/cart",
           "query": "",
           "scene": null
         }

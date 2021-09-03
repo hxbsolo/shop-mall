@@ -1,9 +1,27 @@
 <view class="container">
-  <view>
-    <scroll-view scroll-x="true">
-      <view wx:for="{{navlist}}">
-        <view>{{item}}</view>
+  <view class="switch_nav">
+    <scroll-view scroll-x="true" class="nav_scroll">
+      <view wx:for="{{navlist}}" class="category_nav">
+        <view class="category_nav_text {{item.id==id?'nav_actived':''}}" data-id='{{item.id}}'
+        bindtap="switchcategories">{{item.name}}</view>
       </view>
     </scroll-view>
   </view>
+  <scroll-view scroll-y="true" style="height: 100vh;">
+    <view class="category">
+      <view class="cate_title">
+        <text class="name">{{currentCategory.name}}</text>
+        <text class="front">{{currentCategory.front_name}}</text>
+      </view>
+      <view class="cate_list">
+        <navigator class="cate_item" wx:for="{{goodlist}}" url="/pages/goods/goods?id={{item.id}}">
+          <image src="{{item.list_pic_url}}" class="cate_image"></image>
+          <view>
+            <text class="cate_item_name">{{item.name}}</text>
+            <text class="cate_item_price">¥{{item.retail_price}}</text>
+        </view>
+      </navigator>
+      </view>
+    </view>
+  </scroll-view>
 </view>

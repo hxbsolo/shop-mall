@@ -1,7 +1,7 @@
 <view class="home">
   <weconsole fullTop='400rpx' adapFullTop='600rpx'/>
-<scroll-view scroll-y="true">
-  <view class="main">
+<scroll-view scroll-y="true" class="main">
+  <view >
       <!--搜索 -->
   <navigator class="search_bar" open-type="navigate" url="/pages/search/search">
     <text class="search_bar_con">商品搜索,共{{GoodsCount}}款好物</text>
@@ -65,7 +65,7 @@
    <!-- 专题精选 -->
    <view class="special">
     <view class="home_brand_title">专题精选</view>
-    <scroll-view scroll-x="true" enable-flex="true">
+    <scroll-view scroll-x="true" >
     <view class="special_list">
       <view class="special_item" wx:for="{{data.topicList}}">
         <image src="{{item.item_pic_url}}" class="special_img"></image>

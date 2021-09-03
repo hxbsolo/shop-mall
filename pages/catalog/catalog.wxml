@@ -20,7 +20,7 @@
       <text class="line"></text>
     </view>
     <view class="catlog_list">
-      <navigator class="catlog_item" url="/pages/category/category?id={{item.parent_id}}" wx:for="{{currentCategory.subCategoryList}}">
+      <navigator class="catlog_item" url="/pages/category/category?id={{item.id}}" wx:for="{{currentCategory.subCategoryList}}">
         <image src="{{item.wap_banner_url}}" class="catlog_image"></image>
         <text class="catlog_text">{{item.name}}</text>
       </navigator>

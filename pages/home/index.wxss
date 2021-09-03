@@ -79,8 +79,12 @@ view{
 }
 .home_brand_item{
   position: relative;
-  height: 253rpx;
-  margin-bottom: 2rpx;
+  float: left;
+  width: 374rpx;
+  height: 252rpx;
+  overflow: hidden;
+  border-top: 1rpx solid #fff;
+  margin-left: 1rpx;
 }
 .home_brand_item image {
   position: relative;
@@ -123,7 +127,6 @@ view{
   text-align: center;
   display: block;
   width: 302rpx;
-  height: 35rpx;
   margin-bottom: 14rpx;
   overflow: hidden;
   font-size: 30rpx;
@@ -135,14 +138,12 @@ view{
 .home_new_desc_price{
   display: block;
   text-align: center;
-  line-height: 30rpx;
   font-size: 30rpx;
   color: #b4282d;
 }
 .home_popularity_item{
   border-top: 1px solid #d9d9d9;
   margin: 0 20rpx;
-  height: 264rpx;
 }
 .home_popularity_right{
   height: 264rpx;
@@ -179,21 +180,28 @@ view{
   align-items: center;
 }
 .special_list{
-  display: flex;
   margin: 0 30rpx;
+  width: 750rpx;
+  white-space: nowrap;
 }
 .special_img{
   height: 387.5rpx;
   width: 680.5rpx;
   margin-bottom: 30rpx;
 }
-.special_item{
+.special_list .special_item:last-child{
   margin-right: 30rpx;
 }
-.home_special_desc_title{
-  text-align: center;
+.special_item{
   display: inline-block;
-  width: 302rpx;
+  height: 533rpx;
+  width: 680.5rpx;
+  margin-left: 30rpx;
+  overflow: hidden;
+}
+.home_special_desc_title{
+  display: inline-block;
+  width: 358rpx;
   height: 35rpx;
   font-size: 30rpx;
   color: #333;

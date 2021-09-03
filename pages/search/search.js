@@ -67,6 +67,7 @@ Page({
     if (e.detail.value.length > 0) {
       this.getAll(e.detail.value)
       this.setData({
+        keyword:e.detail.value,
         current: true,
         shopList: [],
         type: {}
