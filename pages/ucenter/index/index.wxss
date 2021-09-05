@@ -1,1 +1,72 @@
-/* pages/ucenter/index/index.wxss */
+.profile{
+    background: #f4f4f4;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+}
+.user_info{
+    width: 100%;
+    height: 280rpx;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 30.25rpx;
+    background: #333;    
+}
+.user_image{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 100rpx;
+}
+.login{
+    flex: 1;
+    height: 45rpx;
+    line-height: 45rpx;
+    color: #fff;
+    font-size: 37.5rpx;
+    margin-left: 20rpx;
+}
+.user_right_image{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50rpx;
+}
+.user_menu{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav_img{
+    width: 52rpx;
+    height: 52rpx;
+}
+.menu_item{
+    width: 33.33333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 187.5rpx;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    border-right: 1px solid rgba(0,0,0,.15);
+}
+.user_menu .menu_item:nth-child(3n){
+    border-right: none !important;
+}
+.item_nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav_text{
+    text-align: center;
+    display: block;
+    height: 24rpx;
+    width: 100%;
+    font-size: 24rpx;
+    color: #333;
+}

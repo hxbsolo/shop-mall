@@ -46,7 +46,13 @@
     background-size: 100%;
     margin: 58rpx 20rpx 20rpx 20rpx;
 }
-
+.itemcheck{
+    width: 37rpx;
+    height: 37rpx;
+    background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-0e09baa37e.png) no-repeat;
+    background-size: 100%;
+    margin: 27rpx 20rpx 20rpx 20rpx;
+}
 .item_check.actived {
     width: 37rpx;
     height: 37rpx;
@@ -108,7 +114,7 @@
 }
 
 .bottom_image {
-    margin: 22rpx 25rpx 20rpx 20rpx !important;
+    margin: 27rpx 25rpx 20rpx 20rpx !important;
 }
 
 .all {

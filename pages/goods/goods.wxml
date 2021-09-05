@@ -1,4 +1,4 @@
-<view class="" >
+<view class="">
     <!-- 轮播图 -->
     <swiper class="details_swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular='true'>
         <swiper-item class="details_swiper_item" item-id="" wx:for="{{detail.gallery}}">
@@ -20,12 +20,13 @@
         </view>
     </view>
     <!-- 添加 -->
-    <view class="switchAttrPop" bindtap="setAttrPop" >
+    <view class="switchAttrPop" bindtap="setAttrPop">
         <view class="switch_t" bindtap="setAttrPop">请选择规格参数</view>
         <image bindtap="setAttrPop" class="switch_image" src="../../static/images/address_right.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
     </view>
+    <!-- 评论 -->
     <!-- 商品参数 -->
-    <view class="shop_details" >
+    <view class="shop_details">
         <view class="shop-dt" hover-class="none" hover-stop-propagation="false">商品参数</view>
         <view class="lab" hover-class="none" hover-stop-propagation="false">
             <view class="lab_item" hover-class="none" hover-stop-propagation="false" wx:for="{{detail.attribute}}">
@@ -34,7 +35,7 @@
             </view>
         </view>
     </view>
-    <view class="show_details" >
+    <view class="show_details">
         <import src="../../lib/wxParse/wxParse.wxml" />
         <template is="wxParse" data="{{wxParseData:article.nodes}}" />
     </view>
@@ -59,12 +60,12 @@
         <view class="l l-collect" bindtap="addCannelCollect">
             <image class="icon" src="/static/images/icon_collect.png"></image>
         </view>
-        <view class="l l-cart">
+        <navigator class="l l-cart" open-type="switchTab" url="/pages/cart/cart">
             <view class="box">
                 <text class="cart-count">{{cartGoodsCount}}</text>
                 <image bindtap="openCartPage" class="icon" src="/static/images/ic_menu_shoping_nor.png"></image>
             </view>
-        </view>
+        </navigator>
         <view class="c">立即购买</view>
         <view class="r" bindtap="addToCart">加入购物车</view>
     </view>
@@ -97,7 +98,7 @@
                 <view class="number-item">
                     <view class="name">数量</view>
                     <view class="selnum">
-                        <view class="cut {{number == 1?'cutived':''}}" bindtap="cutNumber" >-</view>
+                        <view class="cut {{number == 1?'cutived':''}}" bindtap="cutNumber">-</view>
                         <input value="{{number}}" class="number" disabled="true" type="number" />
                         <view class="add" bindtap="addNumber">+</view>
                     </view>

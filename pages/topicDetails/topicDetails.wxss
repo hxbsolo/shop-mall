@@ -1,3 +1,4 @@
+@import "../../lib/wxParse/wxParse.wxss";
 .container{
   background: #f4f4f4;
 }

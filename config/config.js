@@ -1,4 +1,4 @@
-const ApiRootUrl = 'http://192.168.1.22:8360/';
+const ApiRootUrl = 'http://192.168.1.7:8360/';
 module.exports = {
   IndexUrl: ApiRootUrl +'index/index', //首页数据接口
   GoodsCount: ApiRootUrl + 'goods/count',  //统计商品总数

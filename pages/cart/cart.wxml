@@ -7,35 +7,36 @@
     </view>
     <!-- 展示商品 -->
     <view class="show_goodlist">
-        <view class="item" wx:for="{{cartList}}">
-            <view class="item_check item_check.actived" bindtap='setstatus'></view>
+        <view class="item" wx:for="{{edit?editlist:cartList}}">
+            <view class="item_check {{item.checked?'item_check.actived':''}}" data-id='{{item.product_id}}' data-ck='{{item.checked}}' data-i='{{index}}' bindtap='setstatus'></view>
             <view class="item_details">
                 <image src="{{item.list_pic_url}}" class="item_image"></image>
                 <view class="info">
                     <view class="details" hidden="{{edit}}">
                         <text class="name">{{item.goods_name}}</text>
-                        <text class="number">{{item.number}}</text>
+                        <text class="number">x{{item.number}}</text>
                     </view>
                     <view class="attr" hidden="{{!edit}}">已选择</view>
                     <view class="pricet">
                         <view class="price">{{item.retail_price}}</view>
-                        <view class="selnum">
-                            <view class="increment">-</view>
-                            <input type="number" value="1" class="selnum_input"></input>
-                            <view class="crement">+</view>
+                        <view class="selnum" hidden="{{!edit}}" >
+                            <view class="increment" bindtap='decrement' data-v='{{item}}'>-</view>
+                            <input type="number" value="1" class="selnum_input" disabled="{{true}}"></input>
+                            <view class="crement" bindtap='increment' data-v='{{item}}'>+</view>
                         </view>
                     </view>
                 </view>
             </view>
         </view>
     </view>
+    <!-- 下单栏 -->
     <view class="bottom" wx:if="{{cartList.length>0}}">
-        <view class="item_check  item_check.actived bottom_image" bindtap='allstatus'></view>
-        <text class="all" bindtap='allstatus'>全选({{cartTotal.checkedGoodsCount}})</text>
+        <view class="itemcheck  {{checkAll?'item_check.actived bottom_image':''}}" bindtap='allstatus'></view>
+        <text class="all" bindtap='allstatus'>全选({{edit?editCount:cartTotal.checkedGoodsCount}})</text>
         <text class="totalprice">{{edittext=='编辑'?cartTotal.checkedGoodsAmount:''}}</text>
         <text class="edit" bindtap="changeedit">{{edittext}}</text>
-        <text class="push">{{push}}</text>
-    </view>
+        <text class="push" bindtap="deletecart">{{push}}</text>
+    </view> 
     <!-- 无商品 -->
     <view class="none" wx:if="{{!cartList.length>0}}">
         <image class="none_image" src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/noCart-a8fe3f12e5.png"></image>

@@ -39,27 +39,27 @@
    <view class="home_new">
      <view class="home_brand_title">周一周四 · 新品首发</view>
      <view class="home_new_list">
-      <view class="home_new_item" wx:for="{{data.newGoodsList}}">
+      <navigator class="home_new_item" wx:for="{{data.newGoodsList}}" url="/pages/goods/goods?id={{item.id}}">
        <image src="{{item.list_pic_url}}" mode="aspectFill"></image>
        <view class="home_new_drc">
          <text class="home_new_desc_title">{{item.name}}</text>
          <text class="home_new_desc_price">￥{{item.retail_price}}</text>
        </view>
-     </view>
+     </navigator>
      </view>
    </view>
    <!-- 人气推荐 -->
    <view class="home_popularity">
       <view class="home_brand_title">人气推荐</view>
       <view class="home_popularity_list">
-        <view class="home_popularity_item" wx:for="{{data.hotGoodsList}}">
+        <navigator url="/pages/goods/goods?id={{item.id}}" class="home_popularity_item" wx:for="{{data.hotGoodsList}}">
           <image src="{{item.list_pic_url}}" class="home_popularity_img"></image>
           <view class="home_popularity_right">
             <text class="home_new_desc_title">{{item.goods_brief}}</text>
             <text class="home_popularity_details">{{item.goods_brief}}</text>
             <text class="home_popularity_desc_price">￥{{item.retail_price}}</text>
           </view>
-        </view>
+        </navigator>
       </view>
    </view>
    <!-- 专题精选 -->
@@ -83,16 +83,16 @@
    <!--重复商品列表-->
    <view class="floor">
      <view class="floor_list">
-       <view class="fllor_item" wx:for="{{data.categoryList}}">
+       <view class="fllor_item"  wx:for="{{data.categoryList}}">
         <view class="home_brand_title">{{item.name}}</view>
         <view class="home_new_list">
-      <view class="home_new_item" wx:for="{{item.goodsList}}">
+      <navigator class="home_new_item" url="/pages/goods/goods?id={{item.id}}" wx:for="{{item.goodsList}}">
        <image src="{{item.list_pic_url}}" mode="aspectFill"></image>
        <view class="home_new_drc">
          <text class="home_new_desc_title">{{item.name}}</text>
          <text class="home_new_desc_price">￥{{item.retail_price}}</text>
        </view>
-     </view>
+     </navigator>
      </view>
        </view>
      </view>

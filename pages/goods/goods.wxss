@@ -1,3 +1,4 @@
+@import "../../lib/wxParse/wxParse.wxss";
 .details_swiper{
     width: 750rpx;
     height: 750rpx;
