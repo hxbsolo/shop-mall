@@ -1,18 +1,20 @@
 <view class="profile">
-    <view class="user_info" >
-        <image src="http://yanxuan.nosdn.127.net/8945ae63d940cc42406c3f67019c5cb6.png" class="user_image"></image>
+    <view class="user_info" bindtap='ToLogin'>
+        <image src="{{userInfo?userInfo.avatar:'http://yanxuan.nosdn.127.net/8945ae63d940cc42406c3f67019c5cb6.png'}}" class="user_image"></image>
         <view class="login">
-            <text>点击登录</text>
+            <text>{{userInfo?userInfo.nickname:'点击登录'}}</text>
         </view>
         <image class="user_right_image" src="/static/images/address_right.png"></image>
     </view>
     <!-- 菜单 -->
     <view class="user_menu">
-        <view class="menu_item" wx:for="{{user_menu}}" wx:key='url'>
-            <navigator  url="{{item.url}}" class="item_nav">
-                <image src="{{item.img}}" class="nav_img"></image>
-                <text class="nav_text">{{item.name}}</text>
-            </navigator>
+        <navigator url="{{item.url}}" class="menu_item item_nav" wx:for="{{user_menu}}" wx:key='url'>
+            <text class="item_image {{item.img}}"></text>
+            <text class="nav_text">{{item.name}}</text>
+        </navigator>
+        <view class="menu_item" bindtap='signout'>
+            <text class="signout"></text>
+            <text class="singout_text">退出</text>
         </view>
     </view>
 </view>

@@ -14,10 +14,12 @@ Page({
     edittext: '编辑',//编辑/完成
     push: '下单',//下单/删除所选
     checkAll: true,//全选状态
-    checkcopy: null
+    crementStatus: false,
+    // query: 
   },
   onLoad() {
     this.getAll(true)
+    console.log(this.data.query)
   },
   onShow(opations) {
     this.getAll();
@@ -25,9 +27,6 @@ Page({
   //请求商品
   async getAll(s) {
     const res = await http(CartList);
-    res.data.cartList.forEach(v => {
-      v.retail_price = `¥${v.retail_price}`
-    })
     res.data.cartTotal.checkedGoodsAmount = `¥${res.data.cartTotal.checkedGoodsAmount}`
     res.data.cartTotal.goodsAmountgoodsAmount = `¥${res.data.cartTotal.goodsAmountgoodsAmount}`
     this.setData({
@@ -44,9 +43,6 @@ Page({
       isChecked: checked,
       productIds: product
     }, 'POST');
-    ck.data.cartList.forEach(v => {
-      v.retail_price = `¥${v.retail_price}`
-    })
     let checkedd = ck.data.cartList.every(v => {
       return v.checked
     })
@@ -138,12 +134,19 @@ Page({
   },
   //删除所选
   deletecart() {
+    console.log('fffff')
     if (this.data.edit) {
+      console.log('sfsfsfsfsf')
       const arr = [];
       this.data.cartList.filter(v => {
         if (v.checked) {
           arr.push(v.product_id)
         }
+      })
+    }else{
+      console.log('pklacesf')
+      wx.navigateTo({
+        url:'/pages/placeorder/placeorder'
       })
     }
   },
@@ -169,32 +172,47 @@ Page({
   increment(e) {
     const v = e.currentTarget.dataset.v;
     Number(v.number)
-    v.number
-    // http('http://192.168.1.32:8360/cart/update', {
-    //   product_Id: 21,
-    //   goods_Id: 1015007,
-    //   number: 6,
-    //   id: 127,
-    // },'POST').then(res => {
-    //   console.log(res)
-    // })
-    wx.request({
-      url:'http://192.168.1.32:8360/cart/update',
-      method:'POST',
-      data:{
-        product_Id: 21,
-        goods_Id: 1015007,
-        number: 6,
-        id: 127,
-      },
-      success(res){
-        console.log(res)
-      }
+    v.number+=1
+    http(CartUpdate, {
+      productId: v.product_id,
+      goodsId: v.goods_id,
+      number: v.number,
+      id: v.id,
+    },'POST').then(res=>{
+      let arr = this.data.editlist;
+      res.data.cartList.forEach((v,i)=>[
+        arr[i].number = v.number
+      ])
+      this.setData({
+        cartList:res.data.cartList,
+        editlist:arr, 
+        cartTotal:res.data.cartTotal
+      })
     })
   },
   //减
   decrement(e) {
     const v = e.currentTarget.dataset.v;
+    Number(v.number)
+    if(v.number-1>=1){
+      v.number-=1;
+    }
+    http(CartUpdate, {
+      productId: v.product_id,
+      goodsId: v.goods_id,
+      number: v.number,
+      id: v.id,
+    },'POST').then(res=>{
+      let arr = this.data.editlist;
+      res.data.cartList.forEach((v,i)=>[
+        arr[i].number = v.number
+      ])
+      this.setData({
+        cartList:res.data.cartList,
+        editlist:arr, 
+        cartTotal:res.data.cartTotal
+      })
+    })
   },
   //下单/删除
   deletecart(){
@@ -218,6 +236,8 @@ Page({
         })
         
       })
+    }else{
+      
     }
   }
 })

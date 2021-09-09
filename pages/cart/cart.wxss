@@ -1,8 +1,9 @@
+
 .cart{
     height: 100vh;
-    background: #f4f4f4;
     margin-bottom: 120rpx;
 }
+
 .service-policy {
     width: 750rpx;
     height: 73rpx;
@@ -206,4 +207,7 @@
     height: 100%;
     text-align: center;
     line-height: 50rpx;
+}
+.disabled{
+    background: #ccc;
 }

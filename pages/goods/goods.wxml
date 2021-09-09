@@ -25,6 +25,27 @@
         <image bindtap="setAttrPop" class="switch_image" src="../../static/images/address_right.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
     </view>
     <!-- 评论 -->
+    <view class="talk" wx:if="{{detail.comment.count>1}}">
+        <view class="talk_header">
+            <text class="user_name">评价({{detail.comment.count}})</text>
+            <text class="all">查看全部</text>
+        </view>
+        <view class="user">
+            <view class="user_header">
+                <view class="userder">
+                    <image class="user_img" src="{{detail.comment.data.avatar}}"></image>
+                    <text class="user_n">{{detail.comment.data.nickname}}</text>
+                </view>
+                <text class="talk_time">{{detail.comment.data.add_time}}</text>
+            </view>
+            <view>
+                <text class="talk_detail">{{detail.comment.data.content}}</text>
+                <view class="talk_img">
+                    <image wx:for="{{detail.comment.data.pic_list}}" src="{{item.pic_url}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
     <!-- 商品参数 -->
     <view class="shop_details">
         <view class="shop-dt" hover-class="none" hover-stop-propagation="false">商品参数</view>
@@ -58,7 +79,7 @@
     <!-- 添加购物车 -->
     <view class="bottom-btn">
         <view class="l l-collect" bindtap="addCannelCollect">
-            <image class="icon" src="/static/images/icon_collect.png"></image>
+            <image class="icon" src="{{current=='delete'?'/static/images/icon_collect.png':'/static/images/icon_collect_checked.png'}}"></image>
         </view>
         <navigator class="l l-cart" open-type="switchTab" url="/pages/cart/cart">
             <view class="box">

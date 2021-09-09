@@ -24,7 +24,7 @@
     "lazyloadPlaceholderEnable": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": false,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -39,8 +39,8 @@
     "showES6CompileOption": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.2",
-  "appid": "wx4f96c2d883e05f17",
+  "libVersion": "2.14.1",
+  "appid": "wx6b421b50bf500174",
   "projectname": "shop-mall",
   "debugOptions": {
     "hidedInDevtools": []

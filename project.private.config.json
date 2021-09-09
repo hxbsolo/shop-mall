@@ -13,8 +13,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/ucenter/index/index",
-          "pathName": "pages/ucenter/index/index",
+          "name": "pages/carts/index",
+          "pathName": "pages/carts/index",
           "query": "",
           "scene": null
         }

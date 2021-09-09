@@ -1,0 +1,9 @@
+.login{
+    height: 100vh;
+    background:#ffffff;
+    margin-top: 50%;
+}
+.login button {
+    font-size: 24rpx;
+    color: #fff;
+}

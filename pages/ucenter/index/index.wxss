@@ -1,24 +1,27 @@
-.profile{
+.profile {
     background: #f4f4f4;
     height: auto;
     overflow: hidden;
     width: 100%;
 }
-.user_info{
+
+.user_info {
     width: 100%;
     height: 280rpx;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0 30.25rpx;
-    background: #333;    
+    background: #333;
 }
-.user_image{
+
+.user_image {
     width: 200rpx;
     height: 200rpx;
     border-radius: 100rpx;
 }
-.login{
+
+.login {
     flex: 1;
     height: 45rpx;
     line-height: 45rpx;
@@ -26,12 +29,14 @@
     font-size: 37.5rpx;
     margin-left: 20rpx;
 }
-.user_right_image{
+
+.user_right_image {
     width: 50rpx;
     height: 50rpx;
     border-radius: 50rpx;
 }
-.user_menu{
+
+.user_menu {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -39,30 +44,116 @@
     display: flex;
     flex-wrap: wrap;
 }
-.nav_img{
+
+.nav_img {
     width: 52rpx;
     height: 52rpx;
 }
-.menu_item{
+
+.menu_item {
     width: 33.33333%;
     display: flex;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     height: 187.5rpx;
-    border-bottom: 1px solid rgba(0,0,0,.15);
-    border-right: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    border-right: 1px solid rgba(0, 0, 0, .15);
 }
-.user_menu .menu_item:nth-child(3n){
+
+.user_menu .menu_item:nth-child(3n) {
     border-right: none !important;
 }
-.item_nav{
+
+.item_nav {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.nav_text{
+
+.nav_text {
+    text-align: center;
+    display: block;
+    height: 24rpx;
+    width: 100%;
+    font-size: 24rpx;
+    color: #333;
+}
+
+.item_image {
+    margin: 0 auto;
+    display: block;
+    height: 52.803rpx;
+    width: 52.803rpx;
+    margin-bottom: 16rpx;
+}
+
+.item_order {
+    background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png') 0 -437.5rpx no-repeat;
+    background-size: 100%;
+}
+
+.item_discount {
+    background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png') 0 -62.4997rpx no-repeat;
+    background-size: 100%;
+}
+
+.item_gift {
+    background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png') 0 -187.5rpx no-repeat;
+    background-size: 100%;
+}
+
+.item_Collection {
+    background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png') 0 0 no-repeat;
+    background-size: 100%;
+}
+
+.item_footprint {
+    background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png') 0 -500rpx no-repeat;
+    background-size: 100%;
+}
+
+.item_member {
+    background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png') 0 -312.5rpx no-repeat;
+    background-size: 100%;
+}
+
+.item_address {
+    background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png')  0 0 no-repeat;
+    background-size: 100%;
+}
+
+.item_account {
+    background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png') 0 -500rpx no-repeat;
+    background-size: 100%;
+}
+
+.item_customer {
+    background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png') 0 -312.5rpx no-repeat;
+    background-size: 100%;
+}
+
+.item_help {
+    background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png') 0 -250rpx no-repeat;
+    background-size: 100%;
+}
+
+.item_feedback {
+    background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png') 0 -125rpx no-repeat;
+    background-size: 100%;
+}
+.signout{
+    margin: 0 auto;
+    display: block;
+    height: 52.803rpx;
+    width: 52.803rpx;
+    margin-bottom: 16rpx;
+    background: url('http://img.lanrentuku.com/img/allimg/1407/5-140FG95337.gif') no-repeat;
+    background-size: 100%;
+}
+.singout_text{
     text-align: center;
     display: block;
     height: 24rpx;

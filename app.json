@@ -7,6 +7,7 @@
     "pages/catalog/catalog",
     "pages/category/category",
     "pages/cart/cart",
+    "pages/carts/index",
     "pages/goods/goods",
     "pages/ucenter/index/index",
     "pages/ucenter/order/order",
@@ -20,13 +21,15 @@
     "pages/ucenter/customer/customer",
     "pages/ucenter/help/help",
     "pages/ucenter/opinion/opinion",
+    "pages/ucenter/login/login",
     "pages/search/search",
+    "pages/placeorder/placeorder",
     "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "网易严选",
+    "navigationBarTitleText": "仿网易严选",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -71,5 +74,5 @@
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "weconsole": "weconsole/components/main/index"
-}
+  }
 }

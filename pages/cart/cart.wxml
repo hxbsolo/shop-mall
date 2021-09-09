@@ -5,9 +5,13 @@
         <view class="policy_item">48小时快速退款</view>
         <view class="policy_item">满88元免邮费</view>
     </view>
-    <!-- 展示商品 -->
-    <view class="show_goodlist">
-        <view class="item" wx:for="{{edit?editlist:cartList}}">
+    <!-- 展示商品 -->    
+    <scroll-view>
+            <!-- <view class="show_goodlist">
+        <wxs src="cart.wxs" module='cart' />
+        {{cart.touchs}} -->
+                <!-- <view class="item" data-id ="vs" data-query='{{wx.createSelectorQuery()}}' style="transform:translateX({{cart.touchs}}px)" bindtouchstart='{{cart.bindtouchstart}}' bindtouchmove='{{cart.bindtouchmove}}' bindtouchend='{{cart.bindtouchend}}' wx:for="{{edit?editlist:cartList}}" wx:key='goods_id'> -->
+        <view class="item" wx:for="{{edit?editlist:cartList}}" wx:key='goods_id'>
             <view class="item_check {{item.checked?'item_check.actived':''}}" data-id='{{item.product_id}}' data-ck='{{item.checked}}' data-i='{{index}}' bindtap='setstatus'></view>
             <view class="item_details">
                 <image src="{{item.list_pic_url}}" class="item_image"></image>
@@ -18,17 +22,19 @@
                     </view>
                     <view class="attr" hidden="{{!edit}}">已选择</view>
                     <view class="pricet">
-                        <view class="price">{{item.retail_price}}</view>
+                        <view class="price">¥{{item.retail_price}}</view>
                         <view class="selnum" hidden="{{!edit}}" >
-                            <view class="increment" bindtap='decrement' data-v='{{item}}'>-</view>
-                            <input type="number" value="1" class="selnum_input" disabled="{{true}}"></input>
+                            <view class="increment {{item.number<=1?'disabled':''}}" bindtap='decrement'data-v='{{item}}'>-</view>
+                            <input type="number" value="{{item.number}}" class="selnum_input" disabled="{{true}}"></input>
                             <view class="crement" bindtap='increment' data-v='{{item}}'>+</view>
                         </view>
                     </view>
                 </view>
             </view>
         </view>
-    </view>
+        
+    <!-- </view> -->
+    </scroll-view>
     <!-- 下单栏 -->
     <view class="bottom" wx:if="{{cartList.length>0}}">
         <view class="itemcheck  {{checkAll?'item_check.actived bottom_image':''}}" bindtap='allstatus'></view>

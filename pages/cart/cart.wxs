@@ -1,0 +1,24 @@
+var touch ;
+var touchs ;
+var touchss = 0;
+var bindtouchstart = function (e) {
+    //存储最初的位置
+    touch = e.touches[0] || e.changedTouches[0];
+}
+var bindtouchmove = function (e,instance) {
+    touchs = e.touches[0] || e.changedTouches[0]
+    touchss = JSON.stringify(touch.pageX) - JSON.stringify(touchs.pageX)
+    var id = JSON.stringify(e.currentTarget.dataset.id);
+    console.log(JSON.stringify(e.currentTarget.dataset.query))
+    // console.log(query.select('#vs').boundingClientRect() )
+    // console.log(JSON.stringify(instance.selectAllComponents()))
+}
+var bindtouchend = function (e) {
+    
+}
+module.exports = {
+    bindtouchstart: bindtouchstart,
+    bindtouchmove: bindtouchmove,
+    bindtouchend: bindtouchend,
+    touchs:touchss
+};

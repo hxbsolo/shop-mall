@@ -421,4 +421,58 @@
   .cutived{
     background: #f1f1f1;
   }
-  
+  .talk_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20rpx;
+    border-bottom: 1rpx solid #f1f1f1;
+  }
+  .user_name{
+    font-size: 38.5rpx;
+  }
+  .all{
+    display: block;
+    float: right;
+    width: 164rpx;
+    height: 100.5rpx;
+    line-height: 100.5rpx;
+    background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/address-right-990628faa7.png) right center no-repeat;
+    background-size: 52rpx;
+    font-size: 29rpx;
+  }
+  .user{
+    padding: 20rpx;
+  }
+  .user_img{
+    float: left;
+    width: 67rpx;
+    height: 67rpx;
+    margin-right: 17rpx;
+    border-radius: 50%;
+  }
+  .user_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20rpx 0;
+  }
+  .userder{
+    display: flex;
+    align-items: center;
+  }
+  .user_n{
+    font-size: 33rpx;
+  }
+  .talk_time{
+    font-size: 24rpx;
+    color: #7f7f7f;
+  }
+  .talk_detail{
+    font-size: 29rpx;
+  }
+  .talk_img image{
+    width: 100rpx;
+    height: 100rpx ;
+    margin: 10rpx;
+  }

@@ -1,2 +1,12 @@
-<!--pages/ucenter/collection/collection.wxml-->
-<text>pages/ucenter/collection/collection.wxml</text>
+<scroll-view class="collect">
+  <view class="collect_list">
+      <navigator wx:for="{{list}}" class="collect_item" url="/pages/goods/goods?id={{item.value_id}}">
+        <image class="item_img" src="{{item.list_pic_url}}"></image>
+        <view class="item_right">
+          <text class="title">{{item.name}}</text>
+          <text class="detail">{{item.goods_brief}}</text>
+          <text class="price">{{item.retail_price}}</text>
+        </view>
+      </navigator>
+  </view>
+</scroll-view>

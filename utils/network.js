@@ -7,6 +7,10 @@ const http = (url, data = {}, method = "GET") => {
       url,
       data:data,
       method,
+      header: {
+        'Content-Type': 'application/json',
+        'X-Nideshop-Token': wx.getStorageSync('token')
+      },
       success(res) {
         if (res.statusCode === 200) {
           if (res.data.errno === 0) {

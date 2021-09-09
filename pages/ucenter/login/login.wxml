@@ -1,0 +1,3 @@
+<view class="login" hover-class="none" hover-stop-propagation="false">
+    <button open-type="getUserInfo" bindgetuserinfo="GetUserInfo" type="primary">微信授权登录</button>
+</view>

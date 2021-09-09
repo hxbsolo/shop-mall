@@ -1,1 +1,23 @@
-/* pages/ucenter/collection/collection.wxss */
+.collect_item{
+    display: flex;
+}
+.item_img{
+    width: 200rpx;
+    height: 200rpx;
+}
+.item_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 29rpx;
+}
+.title{
+    font-size: 32rpx;
+}
+.detail{
+    font-size: 26rpx;
+    color: #888888;
+}
+.price{
+    font-size: 24rpx;
+}
