@@ -11,6 +11,7 @@ function touchS(e){
    left = Number(e.instance.getComputedStyle(['margin-left'])['margin-left'].split('p')[0])
 
 }
+//滑动过程
 function touchM(e,ins){
   var moveX = e.changedTouches[0].clientX
   var moveY = e.changedTouches[0].clientY
