@@ -5,14 +5,13 @@
         <view class="policy_item">48小时快速退款</view>
         <view class="policy_item">满88元免邮费</view>
     </view>
-    <!-- 展示商品 -->    
+    <!-- 展示商品 -->
     <scroll-view>
-            <!-- <view class="show_goodlist">
-        <wxs src="cart.wxs" module='cart' />
-        {{cart.touchs}} -->
-                <!-- <view class="item" data-id ="vs" data-query='{{wx.createSelectorQuery()}}' style="transform:translateX({{cart.touchs}}px)" bindtouchstart='{{cart.bindtouchstart}}' bindtouchmove='{{cart.bindtouchmove}}' bindtouchend='{{cart.bindtouchend}}' wx:for="{{edit?editlist:cartList}}" wx:key='goods_id'> -->
-        <view class="item" wx:for="{{edit?editlist:cartList}}" wx:key='goods_id'>
-            <view class="item_check {{item.checked?'item_check.actived':''}}" data-id='{{item.product_id}}' data-ck='{{item.checked}}' data-i='{{index}}' bindtap='setstatus'></view>
+        <wxs src='./cart.wxs' module='cart' />
+        <view class="item" wx:for="{{edit?editlist:cartList}}" wx:key='goods_id' bindtouchstart="{{cart.touchS}}"
+            bindtouchmove="{{cart.touchM}}" bindtouchend="{{cart.touchE}}">
+            <view class="item_check {{item.checked?'item_check.actived':''}}" data-id='{{item.product_id}}'
+                data-ck='{{item.checked}}' data-i='{{index}}' bindtap='setstatus'></view>
             <view class="item_details">
                 <image src="{{item.list_pic_url}}" class="item_image"></image>
                 <view class="info">
@@ -23,17 +22,21 @@
                     <view class="attr" hidden="{{!edit}}">已选择</view>
                     <view class="pricet">
                         <view class="price">¥{{item.retail_price}}</view>
-                        <view class="selnum" hidden="{{!edit}}" >
-                            <view class="increment {{item.number<=1?'disabled':''}}" bindtap='decrement'data-v='{{item}}'>-</view>
-                            <input type="number" value="{{item.number}}" class="selnum_input" disabled="{{true}}"></input>
+                        <view class="selnum" hidden="{{!edit}}">
+                            <view class="increment {{item.number<=1?'disabled':''}}" bindtap='decrement'
+                                data-v='{{item}}'>-</view>
+                            <input type="number" value="{{item.number}}" class="selnum_input"
+                                disabled="{{true}}"></input>
                             <view class="crement" bindtap='increment' data-v='{{item}}'>+</view>
                         </view>
                     </view>
                 </view>
             </view>
+        <view class="delete">
+          <text class="delete_c">收藏</text>
+          <text class="delete_l">删除</text>
         </view>
-        
-    <!-- </view> -->
+        </view>
     </scroll-view>
     <!-- 下单栏 -->
     <view class="bottom" wx:if="{{cartList.length>0}}">
@@ -42,10 +45,12 @@
         <text class="totalprice">{{edittext=='编辑'?cartTotal.checkedGoodsAmount:''}}</text>
         <text class="edit" bindtap="changeedit">{{edittext}}</text>
         <text class="push" bindtap="deletecart">{{push}}</text>
-    </view> 
+    </view>
     <!-- 无商品 -->
     <view class="none" wx:if="{{!cartList.length>0}}">
-        <image class="none_image" src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/noCart-a8fe3f12e5.png"></image>
+        <image class="none_image"
+            src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/noCart-a8fe3f12e5.png">
+        </image>
         <text class="goadd">去添加点什么吧</text>
     </view>
 </view>

@@ -36,7 +36,7 @@
 
 .item {
     display: flex;
-    width: 100%;
+    width: 1000rpx;
     overflow: hidden;
 }
 
@@ -210,4 +210,27 @@
 }
 .disabled{
     background: #ccc;
+}
+.delete{
+    min-width: 250rpx;
+    align-self: stretch;
+    color: #fff;
+    display: flex;
+    font-size: 29rpx;
+}
+.delete_l{
+    background: #f11d0c;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delete_c{
+    background: #ffbe0d;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
